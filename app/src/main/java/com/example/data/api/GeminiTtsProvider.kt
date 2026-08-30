@@ -1,5 +1,7 @@
 package com.example.data.api
-
+import com.google.ai.client.generativeai.GenerativeModel
+import com.google.ai.client.generativeai.type.content
+import com.google.ai.client.generativeai.type.generateContent
 import android.content.Context
 import com.example.BuildConfig
 import com.example.data.audio.AudioEngine
