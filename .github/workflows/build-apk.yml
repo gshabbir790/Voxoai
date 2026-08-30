@@ -23,25 +23,21 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-          cache: gradle
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v5
+        with:
+          gradle-version: '9.3.1'
 
-      - name: Generate Gradle Wrapper
-        run: |
-          gradle wrapper --gradle-version 9.3.1
-          chmod +x ./gradlew
-
-      - name: Verify Gradle
-        run: ./gradlew --version
+      - name: Check Gradle
+        run: gradle --version
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
-      - name: Find APK
+      - name: Locate APK
         run: |
-          echo "APK files:"
+          echo "Searching for APK..."
           find app/build/outputs/apk -type f -name "*.apk" -print
 
       - name: Upload APK
