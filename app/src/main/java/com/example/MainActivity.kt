@@ -1,6 +1,4 @@
 package com.example
-import com.example.data.ApiKeyStorage 
-// (اگر آپ کا پیکیج کا نام کچھ اور ہے، تو 'com.example.data' کی جگہ وہ نام لکھیں)
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
