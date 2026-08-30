@@ -5,7 +5,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.data.ApiKeyStorage // ApiKeyStorage کا درست امپورٹ
+import com.example.data.ApiKeyStorage
 
 @Composable
 fun SettingsDialog(
@@ -13,7 +13,6 @@ fun SettingsDialog(
     onDismiss: () -> Unit,
     onKeyUpdated: () -> Unit
 ) {
-    // موجودہ API Key کو حاصل کر کے ٹیکسٹ فیلڈ میں دکھانے کے لیے اسٹیٹ (State)
     var apiKeyText by remember { mutableStateOf(apiKeyStorage.getApiKey()) }
 
     AlertDialog(
@@ -35,7 +34,6 @@ fun SettingsDialog(
         confirmButton = {
             Button(
                 onClick = {
-                    // یہاں ہم بغیر کسی Composable ایرر کے نارمل طریقے سے کی (Key) سیو کر رہے ہیں
                     apiKeyStorage.saveApiKey(apiKeyText)
                     onKeyUpdated()
                 }
