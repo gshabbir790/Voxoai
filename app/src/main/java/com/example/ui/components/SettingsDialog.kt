@@ -1,19 +1,23 @@
-// location: app/src/main/java/com/example/ui/components/SettingsDialog.kt
 package com.example.ui.components
 
 import android.content.Intent
 import android.net.Uri
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Key
-import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+
+// 1. Compose State کے Delegate ایررز (Cannot infer type) ختم کرنے کے لیے یہ امپورٹس لازمی ہیں:
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+
+// 2. ApiKeyStorage کا درست امپورٹ (Unresolved reference ختم کرنے کے لیے):
+import com.example.data.ApiKeyStorage
+
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,7 +26,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.data.ApiKeyStorage
 
 @Composable
 fun SettingsDialog(
@@ -30,7 +33,9 @@ fun SettingsDialog(
     onDismiss: () -> Unit,
     onKeyUpdated: () -> Unit
 ) {
+    // اب یہ لائن بالکل ٹھیک کام کرے گی
     var apiKeyText by remember { mutableStateOf(apiKeyStorage.getApiKey()) }
+    
     val isRealMode = apiKeyText.isNotBlank()
     val context = LocalContext.current
 
