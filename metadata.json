@@ -1,0 +1,6 @@
+{
+  "name": "Voxora AI Studio",
+  "description": "Professional International AI Text-to-Speech & Speech Production Studio with Gemini TTS, multi-scene editor, audio mixer, auto-ducking, and 7-language support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

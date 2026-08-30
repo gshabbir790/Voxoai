@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.65"
+        android:scaleY="0.65"
+        android:translateX="18.9"
+        android:translateY="18.9">
+
+        <!-- Outer Sound Wave Ring -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeWidth="3.5"
+            android:strokeColor="#22D3EE"
+            android:pathData="M 30 54 A 24 24 0 0 1 78 54 A 24 24 0 0 1 30 54" />
+
+        <!-- Microphone Body with Gradient Fill -->
+        <path android:pathData="M 54 28 C 47.37 28 42 33.37 42 40 L 42 56 C 42 62.63 47.37 68 54 68 C 60.63 68 66 62.63 66 56 L 66 40 C 66 33.37 60.63 28 54 28 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:startX="42"
+                    android:startY="28"
+                    android:endX="66"
+                    android:endY="68"
+                    android:type="linear">
+                    <item android:offset="0.0" android:color="#22D3EE" />
+                    <item android:offset="0.5" android:color="#6366F1" />
+                    <item android:offset="1.0" android:color="#A855F7" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <!-- Dynamic Studio Sound Wave Bars Left & Right -->
+        <!-- Left Bars -->
+        <path
+            android:fillColor="#22D3EE"
+            android:pathData="M 22 46 H 26 V 62 H 22 Z" />
+        <path
+            android:fillColor="#6366F1"
+            android:pathData="M 14 50 H 18 V 58 H 14 Z" />
+
+        <!-- Right Bars -->
+        <path
+            android:fillColor="#22D3EE"
+            android:pathData="M 82 46 H 86 V 62 H 82 Z" />
+        <path
+            android:fillColor="#A855F7"
+            android:pathData="M 90 50 H 94 V 58 H 90 Z" />
+
+        <!-- Mic Stand Base -->
+        <path
+            android:fillColor="#00000000"
+            android:strokeWidth="4"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:pathData="M 36 52 C 36 62 44 70 54 70 C 64 70 72 62 72 52" />
+        <path
+            android:fillColor="#00000000"
+            android:strokeWidth="4"
+            android:strokeColor="#FFFFFF"
+            android:strokeLineCap="round"
+            android:pathData="M 54 70 L 54 82 M 42 82 L 66 82" />
+    </group>
+</vector>
